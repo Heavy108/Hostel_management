@@ -1,0 +1,97 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/Dashboard.css
+    ">
+</head>
+
+<body>
+    <div id="header" ></div>
+
+   <div class="bodyContent">
+    <div id="Hometab" class="main--content"></div>
+            <!-- <main-content>-----------------------------------------------------------------</main-content> -->
+            <form action="http://localhost:3000/submitform2" method="post">
+                <div class="Form_container">
+                <!-- <div class="group"><label for="dateTimeOfRegistration">Registration Date</label>
+                <input type="datetime-local" id="dateTimeOfRegistration" name="dateTimeOfRegistration" required></div> -->
+                <div class="group"><label for="Hostel ID">Hostel ID</label>
+                    <input type="text" id="Hostel ID" name="Hostel ID" required></div>
+                    <div class="group"><label for="registrationNumber">Registration Number</label>
+                <input type="text" id="registrationNumber" name="registrationNumber" required></div>
+                
+                <div class="group"><label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required></div>
+                
+                <div class="group"><label for="emailAddress">Email Address</label>
+                <input type="email" id="emailAddress" name="emailAddress" required></div>
+                
+                <div class="group"><label for="contactNumber">Contact Number</label>
+                <input type="tel" id="contactNumber" name="contactNumber" required></div>
+                
+                <div class="group"><label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select></div>
+                <div class="group"><label for="selectedCourse">Selected Course</label>
+                <input type="text" id="selectedCourse" name="selectedCourse" required></div>
+        
+                <div class="group"><label for="emergencyContactNumber">Emergency Contact No</label>
+                <input type="tel" id="emergencyContactNumber" name="emergencyContactNumber" required></div>
+                    
+                <div class="group"><label for="guardianName">Guardian Name</label>
+                <input type="text" id="guardianName" name="guardianName" required></div>
+        
+                
+                <div class="group"> <label for="guardianRelation">Guardian Relation</label>
+                <input type="text" id="guardianRelation" name="guardianRelation" required></div>
+               
+                <div class="group"><label for="guardianContactNumber">Guardian Contact No</label>
+                <input type="tel" id="guardianContactNumber" name="guardianContactNumber" required></div>
+                <div class="group"><label for="currentAddress">Current Address</label>
+                <textarea id="currentAddress" name="currentAddress" rows="4" required></textarea></div>
+        
+                
+                <div class="group"><label for="permanentAddress">Permanent Address</label>
+                <textarea id="permanentAddress" name="permanentAddress" rows="4" required></textarea></div>
+                
+                <div class="group">  <label for="roomNumber">Room No</label>
+                <input type="text" id="roomNumber" name="roomNumber" required></div>
+              
+                <div class="group"><label for="startingDate">Starting Date</label>
+                <input type="date" id="startingDate" name="startingDate" required></div>
+                
+                <div class="group"><label for="seater">Seater</label>
+                <input type="text" id="seater" name="seater" required></div>
+                
+                <div class="group"><label for="duration">Duration</label>
+                <input type="text" id="duration" name="duration" required></div>
+                
+                <div class="group"><label for="foodStatus">Food Status</label>
+                <select id="foodStatus" name="foodStatus" required>
+                    <option value="provided">Provided</option>
+                    <option value="not_provided">Not Provided</option>
+                </select></div>
+                
+                <div class="group" ><input id="submit" type="submit" value="Submit"></div>
+            </div>
+           
+            </form>
+        
+   </div>
+   
+   
+   <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

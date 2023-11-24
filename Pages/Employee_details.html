@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/Dashboard.css">
+</head>
+<body>
+  <div id="header" ></div>
+  <div class="bodyContent">
+  <div id="Hometab" class="main--content"></div>
+    
+    <form action="http://localhost:3000/submitUserForm" method="post">
+        <div class="Form_container">
+          <div class="group">
+            <label for="employeeId">Employee ID:</label>
+            <input type="text" id="employeeId" name="Employee_Id" required>
+          </div>
+    
+          <div class="group">
+            <label for="employeeName">Employee Name:</label>
+            <input type="text" id="employeeName" name="Employee_Name" required>
+          </div>
+    
+          <div class="group">
+            <label for="jobType">Job Type:</label>
+            <input type="text" id="jobType" name="Job_Type" required>
+          </div>
+    
+          <div class="group">
+            <label for="salary">Salary:</label>
+            <input type="text" id="salary" name="Salary" required>
+          </div>
+    
+          <div class="group">
+            <label for="employeeContact">Employee Contact:</label>
+            <input type="text" id="employeeContact" name="Employee_Contact" required>
+          </div>
+    
+          <div class="group">
+            <label for="workingFrom">Working From:</label>
+            <input type="datetime-local" id="dateTimeOfRegistration" name="dateTimeOfRegistration" required></div>
+          </div>
+    
+          <div class="group">
+            <label for="hosId">Hostel ID:</label>
+            <input type="text" id="hosId" name="Hos_Id" required>
+          </div>
+    
+          <div class="group">
+            <input id="submit" type="submit" value="Submit">
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
