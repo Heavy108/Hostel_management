@@ -9,15 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assets/css/Dashboard.css
-    ">
+        <link rel="stylesheet" type="text/css" href="/Css/Dashboard.css">
 </head>
 
 <body>
-    <div id="header" ></div>
-
-   <div class="bodyContent">
-    <div id="Hometab" class="main--content"></div>
+    <%- include("partials/header.ejs") %>
+    <%- include("partials/Hometab.ejs") %>
             <!-- <main-content>-----------------------------------------------------------------</main-content> -->
             <form action="http://localhost:3000/submitform2" method="post">
                 <div class="Form_container">
@@ -88,10 +85,10 @@
            
             </form>
         
-   </div>
+ 
    
    
-   <script src="../assets/js/script.js"></script>
+  
 </body>
 
 </html>

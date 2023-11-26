@@ -4,7 +4,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
-}
+  margin: 0px !important;
+} 
 
 a {
   color: #47b2e4;

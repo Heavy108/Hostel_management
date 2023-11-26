@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link rel="stylesheet" type="text/css" href="/Css/Dashboard.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+
+<body>
+    <%- include("partials/header.ejs") %>
+  <%- include("partials/Hometab.ejs") %>
+            
+    
+                <!-- main-content -->
+                <div class="DoctorContainer">
+                    <% Emp.forEach(item=> { %>
+                        <div class="Doctor">
+                            <h3> Id:<%= item.Employee_Id %>
+                            </h3>
+                            <h3>
+                                <%= item. Employee_Name %>
+                            </h3>
+                            <h3>
+                                Job_Type :<%= item. Job_Type %>
+                            </h3>
+                            <p>Salary:<%= item.Salary %>
+                            </p>
+                        
+                            <p>Contact: <%= item.Employee_Contact %>
+                            </p>
+                        </div>
+                        <% }); %>
+                </div>
+ 
+ 
+
+
+</body>
+
+</html>

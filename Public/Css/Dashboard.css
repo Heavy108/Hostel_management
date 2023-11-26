@@ -24,7 +24,7 @@ body{
     color: white;
     overflow: hidden;
     transition: all 0.5s linear;
-    /* background: rgba(113,99,186,255); */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     background: black;
 }
 /* .sidebar :hover{
@@ -39,14 +39,10 @@ body{
 .menu{
     height: 88%;
 
-    position: relative;
+    position: fixed;
     list-style: none;
     padding: 0;
 
-}
-.bodyContent{
-    display: flex;
-    flex-direction: column;
 }
 .menu li{
    padding: 1rem;
@@ -84,6 +80,7 @@ body{
     background:#ebe9e9;
     width: 100%;
     padding: 1rem;
+
 
 }
 .header--wrapper img{
@@ -260,7 +257,8 @@ gap: 1rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-   
+    justify-content: space-around;  
+    
 }
 .group{
     display: flex;
@@ -300,3 +298,51 @@ th {
     /* background: linear-gradient(111deg, rgba(0,2,53,1) 49%, rgba(0,1,8,1) 100%); */
     background-image: radial-gradient( circle 759px at -6.7% 50%, rgba(80,131,73,1) 0%, rgba(140,209,131,1) 26.2%, rgba(178,231,170,1) 50.6%, rgba(144,213,135,1) 74.1%, rgba(75,118,69,1) 100.3% );
 }
+
+
+
+/* dropdowm */
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+#referIdDropdown {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#referIdDropdown a {
+    padding: 12px 16px;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+#referIdDropdown a:hover {
+    background-color: #ddd;
+}
+
+
+/* doctor */
+
+.DoctorContainer {
+    display: flex;
+      flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .Doctor {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: #fff;
+      text-align: center;
+    border: 2px solid #ccc;
+      border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 20%; /* Adjust the width as needed */
+  }

@@ -11,22 +11,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assets/css/Dashboard.css
-    ">
+        <link rel="stylesheet" type="text/css" href="/Css/Dashboard.css">
 </head>
 
 <body>
-    <div id="header" ></div>
-
-   <div class="bodyContent">
-   <div id="Hometab" class="main--content"></div>
+    <%- include("partials/header.ejs") %>
+    <%- include("partials/Hometab.ejs") %>
             <!-- <main-content>-----------------------------------------------------------------</main-content> -->
             
             <form action="http://localhost:3000/submit" method="post">
                 <div class="Form_container">
                     <div class="group"><label for="visitorName">Visitor's Name</label>
                 <input type="text" id="visitorName" name="visitorName" required></div>
-                <div class="group"><label for="Hostel ID">Hostel ID</label>
+                <div class="group"><label for="Resident_ID">Resident_ID</label>
                     <input type="text" id="Hostel ID" name="Hostel ID" required></div>
                 
                 <div class="group"><label for="contactNumber">Contact Number</label>
@@ -44,8 +41,8 @@
                 
                 <div class="group"><label for="foodStatus">Food Status</label>
                 <select id="foodStatus" name="foodStatus" required>
-                    <option value="provided">Provided</option>
-                    <option value="not_provided">Not Provided</option>
+                    <option value="provided">provided</option>
+                    <option value="not_provided">not_provided</option>
                 </select></div>
                 
                 <div class="group"><input id="submit" type="submit" value="Submit"></div>
@@ -53,10 +50,40 @@
             </div>
             </form>
                
-            
- </div>  
 
- <script src="../assets/js/script.js"></script>
+            <% if (appointments && appointments.length > 0) { %>
+                <table border="1">
+                  <thead>
+                    <tr>
+                      <th>Visitor_Name</th>
+                      <th>Resident_ID</th>
+                      <th>Contact_number</th>
+                      <th>Purpose_of_Visit</th>
+                      <th>Check_In</th>
+                      <th> Check_In</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% appointments.forEach(appointment => { %>
+                      <tr>
+                        <td><%= appointment.Visitor_Name %></td>
+                        <td><%= appointment.Resident_ID %></td>
+                        <td><%= appointment.Contact_number %></td>
+                        <td><%= appointment.Purpose_of_Visit %></td>
+                        <td><%= appointment.Check_In.toLocaleDateString() %></td>
+                        <td><%= appointment.Check_In.toLocaleDateString() %></td>
+                      </tr>
+                    <% }); %>
+                  </tbody>
+                </table>
+              <% } else { %>
+                <p>No appointments available.</p>
+              <% } %>
+        
+            
+
+
+ 
 </body>
 
 </html>
